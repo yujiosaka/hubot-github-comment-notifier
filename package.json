@@ -1,0 +1,26 @@
+{
+  "name": "hubot-github-comment-notifier",
+  "description": "A GitHub pull request and issue comment notifier for hubot",
+  "version": "0.0.1",
+  "author": "yujiosaka <yuji.i@doboken.net>",
+  "license": "MIT",
+  "keywords": [
+    "hubot",
+    "github",
+    "pull-request"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yujiosaka/hubot-github-comment-notifier.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yujiosaka/hubot-github-comment-notifier/issues"
+  },
+  "dependencies": {
+    "underscore": "^1.7.0"
+  },
+  "main": "index.coffee",
+  "engines": {
+    "node": "0.10.x"
+  }
+}
