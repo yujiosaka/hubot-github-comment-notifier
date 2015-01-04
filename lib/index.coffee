@@ -5,8 +5,7 @@ exports.extractMentions = (body) ->
   mentions = []
   match = body.match /(^|\s)(@[\w\-\/]+)/g
   if match
-    mentions = _.uniq match
-    mentions = (mention.trim() for mention in mentions)
+    mentions = _.uniq(mention.trim() for mention in match)
   mentions
 
 exports.buildMessage = (parts, opts) ->
