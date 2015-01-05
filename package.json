@@ -1,7 +1,7 @@
 {
   "name": "hubot-github-comment-notifier",
   "description": "A GitHub pull request and issue comment notifier for hubot",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "yujiosaka <yuji.i@doboken.net>",
   "license": "MIT",
   "keywords": [
