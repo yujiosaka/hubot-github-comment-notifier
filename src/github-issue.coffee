@@ -7,9 +7,9 @@
 #   You need to add `HUBOT_URL/hubot/github-issue?room=ROOM[&only-mentioned=1]` to your repository's webhooks.
 #     HUBOT_URL: Your Hubot server's url
 #     ROOM` To which room you want to send notification
-#
+# 
 #     When `&only-commented=1` is added, it sends notifications only when there are `@` mentions.
-#
+# 
 # Author:
 #   yujiosaka
 
