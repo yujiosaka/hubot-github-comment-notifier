@@ -62,7 +62,7 @@ See [`_team.json`](_team.json) for its example
 
 #### Pull Request
 
-You need to add `HUBOT_URL/hubot/github-pull-request?room=ROOM[&only-mentioned=1][&randm-mention=1]` to your repository's webhooks.
+You need to add `HUBOT_URL/hubot/github-pull-request?room=ROOM[&only-mentioned=1][&randm-mention=1][&hidden-user-name=1]` to your repository's webhooks.
 
 | Parameter | Description |
 | -------- | ----------- |
@@ -72,10 +72,11 @@ You need to add `HUBOT_URL/hubot/github-pull-request?room=ROOM[&only-mentioned=1
 - When `&only-mentioned=1` is added, it sends notifications only when there are `@` mentions.
 - When `&random-mention=1` is added, it picks-up a user from team.json and send notification.
   - You can specify more than `2` in the value to pick-up more than two users.
+- When `&hidden-user-name=1` is added, it hide user name from notification sentence.
 
 #### Issue
 
-You need to add `HUBOT_URL/hubot/github-issue?room=ROOM[&only-mentioned=1]` to your repository's webhooks.
+You need to add `HUBOT_URL/hubot/github-issue?room=ROOM[&only-mentioned=1][&hidden-user-name=1]` to your repository's webhooks.
 
 | Parameter | Description |
 | -------- | ----------- |
@@ -83,3 +84,4 @@ You need to add `HUBOT_URL/hubot/github-issue?room=ROOM[&only-mentioned=1]` to y
 | `ROOM` | To which room you want to send notification |
 
 - When `&only-mentioned=1` is added, it sends notifications only when there are `@` mentions.
+- When `&hidden-user-name=1` is added, it hide user name from notification sentence.
