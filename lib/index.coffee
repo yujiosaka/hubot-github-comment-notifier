@@ -14,8 +14,9 @@ exports.buildMessage = (parts, opts) ->
   random_mentions = if parts.random then random(mentions, opts.random_mention, opts.mention_team) else []
   return null if opts.only_mentioned and mentions.length is 0 and random_mentions.length is 0
   msg = ""
-  msg += "[#{parts.repository}] #{parts.action}: ##{parts.number} #{parts.title} by #{parts.user}\n"
-  msg += "#{parts.url}\n"
+  msg += "[#{parts.repository}] #{parts.action}: ##{parts.number} #{parts.title}"
+  msg += " by #{parts.user}" unless opts.ignore_sender
+  msg += "\n#{parts.url}\n"
   msg += "#{parts.body}\n" if parts.body
   msg += "Mentions: #{mentions.join(", ")}\n" if mentions.length
   msg += "Congratulations! You are assigned: #{random_mentions.join(", ")}\n" if random_mentions.length
