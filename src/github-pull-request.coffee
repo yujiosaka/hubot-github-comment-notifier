@@ -27,7 +27,7 @@ module.exports = (robot) ->
       only_mentioned: query["only-mentioned"]
       random_mention: +query["random-mention"]
       mention_team: query["mention-team"]
-      ignore_author: query["ignore-author"]
+      ignore_sender: query["ignore-sender"]
     parts = parseBody req.body
     message = lib.buildMessage parts, opts
     robot.send {room: query.room}, message if message
