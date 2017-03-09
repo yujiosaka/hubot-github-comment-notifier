@@ -25,7 +25,7 @@ module.exports = (robot) ->
     query = querystring.parse url.parse(req.url).query
     opts =
       only_mentioned: query["only-mentioned"]
-      hidden_user_name: query["hidden-user-name"]
+      ignore_sender: query["ignore-sender"]
     parts = parseBody req.body
     message = lib.buildMessage parts, opts
     robot.send {room: query.room}, message if message

@@ -15,7 +15,7 @@ exports.buildMessage = (parts, opts) ->
   return null if opts.only_mentioned and mentions.length is 0 and random_mentions.length is 0
   msg = ""
   msg += "[#{parts.repository}] #{parts.action}: ##{parts.number} #{parts.title}"
-  msg += " by #{parts.user}" unless opts.hidden_user_name
+  msg += " by #{parts.user}" unless opts.ignore_sender
   msg += "\n#{parts.url}\n"
   msg += "#{parts.body}\n" if parts.body
   msg += "Mentions: #{mentions.join(", ")}\n" if mentions.length
